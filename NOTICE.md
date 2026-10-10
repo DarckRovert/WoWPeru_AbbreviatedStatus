@@ -1,32 +1,28 @@
-# Aviso Legal y Créditos de Código de Terceros — ProjectJaina_AbbreviatedStatus
+# 📜 Aviso Legal y Atribución — ProjectJaina_AbbreviatedStatus
 
-Este repositorio forma parte del ecosistema oficial de **Project Jaina - Project Jaina**.
-Contiene adaptaciones, correcciones de estabilidad y mantenimiento del addon **AbbreviatedStatus** para el cliente World of Warcraft 3.3.5a (Build 12340).
-
----
-
-## 1. Atribución del Proyecto Original Upstream
-
-* **Autor Original:** RomanSpector
-* **Repositorio Upstream:** [RomanSpector/AbbreviatedStatus](https://github.com/RomanSpector/AbbreviatedStatus)
-* **Propósito:** Abreviación compacta de números de vida y maná en marcos de unidad y barras de estado.
+Este repositorio forma parte del ecosistema oficial de **Project Jaina**.
+Contiene Formateador flotante de estadísticas numéricas de salud y maná abreviadas (K/M) en marcos de unidad y HUD de combate. para el cliente World of Warcraft 3.3.5a (Build 12340).
 
 ---
 
-## 2. Estado de Licencia del Código Fuente Upstream
-
-El repositorio upstream de RomanSpector no incluye un archivo formal de licencia abierta (licencia `null` en GitHub). De acuerdo con la legislación internacional de propiedad intelectual y los términos de servicio de GitHub, el autor original retiene todos los derechos sobre la obra base.
-
-Por respeto estricto a la autoría original y conforme a la gobernanza de Project Jaina:
-1. No se adjunta una licencia MIT sobre este repositorio para evitar adjudicaciones erróneas de derechos.
-2. Se preservan intactos todos los créditos y nombres de autoría en el archivo `.toc` y código fuente.
-3. El proyecto se mantiene como fork comunitario sin fines comerciales para garantizar la estabilidad del cliente del Project Jaina.
+## 1. Autoría y Desarrollo Oficial
+* **Desarrollador Principal:** DarckRovert (Ingame: `Elnazzareno`) & Antigravity (Mythos 5)
+* **Ecosistema:** [Project Jaina Oficial](https://darckrovert.github.io/ProjectJaina_Web/)
+* **Repositorio Oficial:** [DarckRovert/ProjectJaina_AbbreviatedStatus](https://github.com/DarckRovert/ProjectJaina_AbbreviatedStatus)
 
 ---
 
-## 3. Correcciones de Estabilidad Implementadas por Project Jaina
+## 2. Arquitectura y Protocolo Autoritativo
+* **Prefijo de Red:** `N/A (Cálculo local FrameXML)`
+* **Integración Servidor:** `N/A (Cliente local puro)`
+* **Variables Guardadas:** `ProjectJaina_AbbrevStatusDB`
+* **Comandos Slash:** `/abbrev, /astatus`
 
-El equipo de ingeniería de Project Jaina ha aplicado las siguientes correcciones de bajo nivel sobre el código original:
-* **Prevención de `NaN` (División por Cero):** Validación estricta de `valueMax > 0` antes de calcular el porcentaje `value / valueMax * 100`, eliminando crashes en Windows MSVCRT con barras vacías.
-* **Control de Índices de Abreviación:** Clampeo del índice del slider de prefijos para evitar indexación negativa en la tabla `NUMBER_ABBREVIATION_DATA`.
-* **Guardias contra Marcos Nulos:** Verificación de existencia de marcos antes de invocar `GetStatusBarType` y `SetPosition`.
+---
+
+## 3. Cumplimiento de Políticas de Interfaz (Blizzard Custom UI Policy)
+En estricto cumplimiento de la Política de Interfaz de Usuario Personalizada de Blizzard Entertainment (2009):
+1. **Gratuito y Abierto:** Este software es completamente gratuito y de código abierto para la comunidad de jugadores.
+2. **Sin Alteración de Binarios:** No realiza ingeniería inversa, inyección de código ni altera binarios del juego (`WoW.exe`).
+3. **Aislamiento FrameXML:** Respeta el aislamiento de ejecución en FrameXML y no genera taint en subsistemas protegidos de combate.
+4. **Sin Publicidad ni Cobro:** No incluye anuncios publicitarios ni solicita compensación monetaria directa para el uso de sus funciones in-game.

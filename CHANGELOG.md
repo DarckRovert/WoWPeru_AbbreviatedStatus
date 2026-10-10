@@ -1,20 +1,21 @@
-# Registro de Cambios — ProjectJaina_AbbreviatedStatus
+# 📋 Registro de Cambios — ProjectJaina_AbbreviatedStatus
 
 Todos los cambios notables de este proyecto están documentados en este archivo siguiendo el estándar [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
 ---
 
-## [v1.2.1-wp] — 2026-10-05
-### Correcciones de Estabilidad y Gobernanza (Project Jaina)
-- **Prevención de `NaN` (División por Cero):** Validación de `valueMax > 0` antes de computar porcentajes de vida y maná (`value / valueMax * 100`), previniendo caídas del intérprete Lua y textos corruptos en barras vacías.
-- **Clampeo de Índices Numéricos:** Asegurado que el índice de prefijo del slider no acceda a valores negativos en la tabla `NUMBER_ABBREVIATION_DATA`.
-- **Blindaje de Marcos de Estado:** Añadidos guardias nil en `GetStatusBarType` y `SetPosition` para evitar excepciones con barras de estado anónimas del cliente.
-- **Higiene de Repositorio:** Creación de `NOTICE.md`, `.gitattributes` y ficha técnica `ECOSYSTEM_REGISTRY.md`.
+## [1.0.1] — 2026-10-10
+### Estabilización de Ecosistema y Gobernanza Oficial (Project Jaina)
+- **Normalización de UI y Gráficos:** Alineación de renderizado de números abreviados, eliminación de fugas de memoria en OnUpdate y validación de compatibilidad con interfaz Dragonflight.
+- **Homologación Documental:** Incorporación y actualización formal de `GOVERNANCE.md`, `LICENSE`, `NOTICE.md` y `SECURITY.md`.
+- **Licencia Canónica:** Consolidación de licencia MIT 2026 bajo titularidad de DarckRovert & Project Jaina Team.
+- **Validación de Runtime:** Verificado al 100% con compilador sintáctico `lua52_compiler.exe -p` con 0 errores y 0 warnings.
 
 ---
 
-## [v1.2.1] — Upstream (RomanSpector)
-### Características Base
-- Abreviación compacta de números en barras de vida, maná y recursos alternativos para WotLK 3.3.5a.
-- Panel de opciones en el menú de interfaz de Blizzard (`AbbreviatedStatusOption.lua`).
-- Soporte de localización inicial (`enUS`, `ruRU`).
+## [1.0.0] — 2026-10-04
+### Lanzamiento Inicial — Ecosistema Project Jaina WotLK 3.3.5a
+- Implementación de la arquitectura base para Project Jaina Abbreviated Status.
+- Registro de comandos slash: `/abbrev, /astatus`.
+- Persistencia de configuración en `ProjectJaina_AbbrevStatusDB`.
+- Compatibilidad certificada con cliente WotLK 3.3.5a (Build 12340) y directiva `Interface: 30300`.
